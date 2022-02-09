@@ -2,14 +2,12 @@
 #Workflows
 workflows:
   my-workflow:
-    instance_type: linux
     environment:
       ruby: 2.5.2
     environment:
       java: 1.8
     environment:
       flutter: beta
-      
     working_directory: mobile
     scripts:
       - name: Build iOS
