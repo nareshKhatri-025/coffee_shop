@@ -1,1 +1,24 @@
 #Workflows
+#Workflows
+workflows:
+  my-workflow:
+    instance_type: linux
+    environment:
+      ruby: 2.5.2
+    environment:
+      java: 1.8
+    environment:
+      flutter: beta
+      
+    working_directory: mobile
+    scripts:
+      - name: Build iOS
+        working_directory: mobile/ios
+        script: ...
+    scripts:
+      - name: Build Android APK
+        working_directory: android
+        script: ./gradlew assembleRelease
+    artifacts:
+      - app/build/outputs/**/**/*.apk
+
