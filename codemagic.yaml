@@ -2,13 +2,6 @@
 #Workflows
 workflows:
   my-workflow:
-    environment:
-      ruby: 2.5.2
-    environment:
-      java: 1.8
-    environment:
-      flutter: beta
-    working_directory: mobile
     scripts:
       - name: Build iOS
         working_directory: mobile/ios
